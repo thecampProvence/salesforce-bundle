@@ -20,15 +20,16 @@ class ConfigurationTest extends TestCase
     public function test_ok_with_configuration()
     {
         $config = [
-            'host' => 'http://domain.tld',
-            'version' => 'v1337',
-            'oauth' => [
+            'guzzle_client' => null,
+            'host'          => 'http://domain.tld',
+            'version'       => 'v1337',
+            'oauth'         => [
                 'password_strategy' => [
-                    'consumer_key' => 'vicmkey',
+                    'consumer_key'    => 'vicmkey',
                     'consumer_secret' => 'vicsecret',
-                    'login' => 'login',
-                    'password' => 'pwd',
-                    'security_token' => 'st',
+                    'login'           => 'login',
+                    'password'        => 'pwd',
+                    'security_token'  => 'st',
                 ],
             ],
         ];
