@@ -1,0 +1,32 @@
+services:
+    wow.salesforce.gateway:
+        class: WakeOnWeb\SalesforceClient\REST\Gateway
+        # public: false
+        arguments:
+          - '%wakeonweb_salesforce.host%'
+          - '%wakeonweb_salesforce.version%'
+
+    wow.salesforce.password_strategy:
+        class: WakeOnWeb\SalesforceClient\REST\GrantType\PasswordStrategy
+        # public: false
+        arguments:
+          - '%wakeonweb_salesforce.oauth.password_strategy.consumer_key%'
+          - '%wakeonweb_salesforce.oauth.password_strategy.consumer_secret%'
+          - '%wakeonweb_salesforce.oauth.password_strategy.login%'
+          - '%wakeonweb_salesforce.oauth.password_strategy.password%'
+          - '%wakeonweb_salesforce.oauth.password_strategy.security_token%'
+
+    wow.salesforce.client:
+        class: WakeOnWeb\SalesforceClient\REST\Client
+        arguments:
+          - '@serializer'
+          - '@wow.salesforce.gateway'
+          - '@wow.salesforce.password_strategy'
+          # - '@?wakeonweb_salesforce.guzzle_client'
+
+    # Normalizer
+    # wow.salesforce.account_normalizer:
+    #     class: WakeOnWeb\SalesforceClient\Normalizer\AccountNormalizer
+    #     public: false
+    #     tags:
+    #         - name: serializer.normalizer
