@@ -64,11 +64,14 @@ class WakeonwebSalesforceExtension extends Extension
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+        $loader->load('normalizers.yml');
 
         $container
             ->getDefinition('wow.salesforce.client')
             ->addArgument($config['guzzle_client'] ? new Reference($config['guzzle_client']) : null)
         ;
+
+        $container->setAlias('thecamp_salesforce.client', 'wow.salesforce.client');
 
         // Old process
         // $config = (new Processor())->processConfiguration(new Configuration(), $configs);

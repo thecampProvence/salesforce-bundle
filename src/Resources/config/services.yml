@@ -23,6 +23,7 @@ services:
           - '@wow.salesforce.gateway'
           - '@wow.salesforce.password_strategy'
           # - '@?wakeonweb_salesforce.guzzle_client'
+          # - '@GuzzleHttp\ClientInterface'
 
     # Normalizer
     # wow.salesforce.account_normalizer:

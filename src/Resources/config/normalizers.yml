@@ -1,0 +1,18 @@
+services:
+    _defaults:
+        public: false
+        # autowire: true
+        # autoconfigure: true
+        # public: true
+        tags:
+            - name: serializer.normalizer
+
+    WakeOnWeb\SalesforceClient\Normalizer\AccountNormalizer: ~
+    WakeOnWeb\SalesforceClient\Normalizer\ContactNormalizer: ~
+    WakeOnWeb\SalesforceClient\Normalizer\Npe5__Affiliation__cNormalizer: ~
+    WakeOnWeb\SalesforceClient\Normalizer\On_site_presence__cNormalizer: ~
+    WakeOnWeb\SalesforceClient\Normalizer\Program_session__cNormalizer: ~
+    WakeOnWeb\SalesforceClient\Normalizer\Relationship_Account_Program__cNormalizer: ~
+    WakeOnWeb\SalesforceClient\Normalizer\Relationship_Member_Program__cNormalizer: ~
+    WakeOnWeb\SalesforceClient\Normalizer\Relationship_Member_Session__cNormalizer: ~
+    WakeOnWeb\SalesforceClient\Normalizer\Relationship_Program_Session__cNormalizer: ~
