@@ -11,7 +11,7 @@ services:
     WakeOnWeb\SalesforceClient\Normalizer\ContactNormalizer: ~
     WakeOnWeb\SalesforceClient\Normalizer\Npe5__Affiliation__cNormalizer: ~
     WakeOnWeb\SalesforceClient\Normalizer\On_site_presence__cNormalizer: ~
-    WakeOnWeb\SalesforceClient\Normalizer\Program_session__cNormalizer: ~
+    WakeOnWeb\SalesforceClient\Normalizer\Program_Session__cNormalizer: ~
     WakeOnWeb\SalesforceClient\Normalizer\Relationship_Account_Program__cNormalizer: ~
     WakeOnWeb\SalesforceClient\Normalizer\Relationship_Member_Program__cNormalizer: ~
     WakeOnWeb\SalesforceClient\Normalizer\Relationship_Member_Session__cNormalizer: ~

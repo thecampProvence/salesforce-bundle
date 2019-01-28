@@ -56,7 +56,7 @@ class WakeonwebSalesforceExtensionTest extends TestCase
         $this->assertTrue($this->containerBuilder->has('WakeOnWeb\SalesforceClient\Normalizer\ContactNormalizer'));
         $this->assertTrue($this->containerBuilder->has('WakeOnWeb\SalesforceClient\Normalizer\Npe5__Affiliation__cNormalizer'));
         $this->assertTrue($this->containerBuilder->has('WakeOnWeb\SalesforceClient\Normalizer\On_site_presence__cNormalizer'));
-        $this->assertTrue($this->containerBuilder->has('WakeOnWeb\SalesforceClient\Normalizer\Program_session__cNormalizer'));
+        $this->assertTrue($this->containerBuilder->has('WakeOnWeb\SalesforceClient\Normalizer\Program_Session__cNormalizer'));
         $this->assertTrue($this->containerBuilder->has('WakeOnWeb\SalesforceClient\Normalizer\Relationship_Account_Program__cNormalizer'));
         $this->assertTrue($this->containerBuilder->has('WakeOnWeb\SalesforceClient\Normalizer\Relationship_Member_Program__cNormalizer'));
         $this->assertTrue($this->containerBuilder->has('WakeOnWeb\SalesforceClient\Normalizer\Relationship_Member_Session__cNormalizer'));
