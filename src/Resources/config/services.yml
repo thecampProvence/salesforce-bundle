@@ -25,9 +25,9 @@ services:
           # - '@?wakeonweb_salesforce.guzzle_client'
           # - '@GuzzleHttp\ClientInterface'
 
-    # Normalizer
-    # wow.salesforce.account_normalizer:
-    #     class: WakeOnWeb\SalesforceClient\Normalizer\AccountNormalizer
-    #     public: false
-    #     tags:
-    #         - name: serializer.normalizer
+    wow.salesforce.model.repository:
+        class: WakeOnWeb\SalesforceClient\Repository\ModelRepository
+        public: false
+        arguments:
+          - '@wow.salesforce.client'
+          - '@logger'

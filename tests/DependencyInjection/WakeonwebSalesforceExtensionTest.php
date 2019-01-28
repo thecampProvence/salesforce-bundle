@@ -51,6 +51,7 @@ class WakeonwebSalesforceExtensionTest extends TestCase
         $this->assertTrue($this->containerBuilder->has('wow.salesforce.client'));
         $this->assertTrue($this->containerBuilder->has('wow.salesforce.gateway'));
         $this->assertTrue($this->containerBuilder->has('wow.salesforce.password_strategy'));
+        $this->assertTrue($this->containerBuilder->has('wow.salesforce.model.repository'));
         $this->assertTrue($this->containerBuilder->has('WakeOnWeb\SalesforceClient\Normalizer\AccountNormalizer'));
         $this->assertTrue($this->containerBuilder->has('WakeOnWeb\SalesforceClient\Normalizer\ContactNormalizer'));
         $this->assertTrue($this->containerBuilder->has('WakeOnWeb\SalesforceClient\Normalizer\Npe5__Affiliation__cNormalizer'));
